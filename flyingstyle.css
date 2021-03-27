@@ -1,0 +1,27 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+#gameScreen {
+    border: 1px solid black;
+    background-color: white;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    display: none;
+}
+
+.canvas {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    margin-left: -600px;
+    margin-top: -300px;
+    border-radius: 5px;
+}
