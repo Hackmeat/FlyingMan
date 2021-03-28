@@ -34,6 +34,7 @@ function gameLoop(timestamp) {
     shop.draw(ctx)
     shop.update(deltaTime)
 
+    //Renewing some of the main parts to reset their values
     if (game.allowRestart) {
         player = new Player(GAME_WIDTH, GAME_HEIGHT, input)
         game = new Game(GAME_WIDTH, GAME_HEIGHT, input, player)

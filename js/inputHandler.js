@@ -9,6 +9,7 @@ class InputHandler {
         this.mouseX = 0
         this.mouseY = 0
 
+        //Detecting if space or one of the two mouse buttons is being pressed down or is being released
         document.addEventListener("keydown", event => {
             switch (event.keyCode) {
                 case 32:

@@ -42,7 +42,7 @@ class GameFeatures {
             ctx.fillStyle = '#000'
             ctx.strokeText("PRESS SPACE TO CONTINUE", this.gameWidth / 2, this.gameHeight - 10)
 
-            //Animation for the dropping scoreboard
+            //Animation for the dropping scoreboard & showing the scores of the latest jump
             if (this.scoreBoardY > -60 && this.size > 1) {
                 if (this.size > 30) {
                     this.size -= 20
@@ -76,6 +76,7 @@ class GameFeatures {
     }
 
     update(deltaTime) {
+        //Initialize the scoreboard to drop down and calculate the shown scores
         if (this.game.isFinished && this.scoreBoardY < -60) {
             this.scoreBoardY += this.dropSpeed
             this.dropSpeed++
@@ -98,6 +99,7 @@ class GameFeatures {
             this.jumpHeight = ((this.player.position.y - 490) * - 1)
         }
 
+        //Countdown to open the shop
         if (this.startCountdown) {
             let d = new Date()
             let n = d.getTime()
